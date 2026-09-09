@@ -194,7 +194,7 @@ main > h1 {
 
 .about {
   display: grid;
-  grid-template-columns: minmax(240px, 0.8fr) minmax(320px, 1.2fr);
+  grid-template-columns: minmax(200px, 0.8fr) minmax(400px, 1.8fr);
   align-items: center;
   gap: 64px;
   max-width: 900px;
@@ -207,8 +207,8 @@ main > h1 {
 
 .about-image img {
   max-width: 300px;
-  border-radius: 3px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .about-text {
@@ -280,8 +280,8 @@ main > h1 {
 /* CSS for contact form */
 
 .contact {
-  display: grid;
-  grid-template-columns: minmax(400px, 0.8fr) minmax(400px, 0.8fr);
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 64px;
   max-width: 900px;
@@ -308,7 +308,7 @@ textarea {
   border: 1px solid var(--cg-border);
   border-radius: 4px;
   font-size: 16px;
-  resize: none;
+  resize: vertical;
 }
 
 /* Add some spacing to the form */
