@@ -23,18 +23,24 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Space Grotesk", sans-serif
+  font-family: "Space Grotesk", sans-serif;
 }
 
-p strong {
+strong {
   color: var(--cg-green);
 }
 
-p em {
+em {
   background-color: var(--cg-border);
   color: var(--cg-green-dark);
   padding: 2px 4px;
   border-radius: 3px;
+}
+
+code {
+  background-color: lightgray;
+  padding: 1px 2px;
+  border-radius: 2px;
 }
 
 /* CSS for navigation */
@@ -93,11 +99,18 @@ p em {
 }
 
 main {
-  padding: 0 20px 40px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 96px 0 120px;
+}
+
+main > h1 {
+  max-width: 900px;
+  margin: 0 auto 32px;
+  color: var(--cg-green-dark);
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -2px;
 }
 
 .page-title {
@@ -180,14 +193,16 @@ main {
 /* CSS for home page */
 
 .about {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(240px, 0.8fr) minmax(320px, 1.2fr);
   align-items: center;
-  justify-content: space-between;
-  padding: 20px;
+  gap: 64px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px;
   background-color: var(--cg-surface);
   border: 1px solid var(--cg-border);
-  border-radius: 5px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  border-radius: 12px;
 }
 
 .about-image img {
@@ -213,6 +228,11 @@ main {
 
 /* CSS for resume page */
 
+#download-resume {
+  display: inline-block;
+  font-size: 24px;
+}
+
 .button {
   background-color: var(--cg-green-dark);
   border: none;
@@ -230,11 +250,47 @@ main {
   background-color: var(--cg-green);
 }
 
+.resume {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px;
+  background-color: var(--cg-surface);
+  border: 1px solid var(--cg-border);
+  border-radius: 12px;
+}
+
+.resume-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.resume-entry {
+  height: fit-content;
+}
+
 .resume h2 {
   font-family: "Space Grotesk", sans-serif;
 }
 
 /* CSS for contact form */
+
+.contact {
+  display: grid;
+  grid-template-columns: minmax(400px, 0.8fr) minmax(400px, 0.8fr);
+  align-items: center;
+  gap: 64px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px;
+  background-color: var(--cg-surface);
+  border: 1px solid var(--cg-border);
+  border-radius: 12px;
+}
 
 label {
   display: block;
